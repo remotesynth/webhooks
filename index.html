@@ -7,9 +7,10 @@
 <form id="sendWebhookForm" onsubmit="return sendWebhook(this);">
     <label for="fullName">Name:</label> <input type="text" name="fullName"> 
     <label for="email">Email:</label> <input type="email" name="email"> 
-    <input type="submit" value="Submit">
+    <input name="sendInfo" type="submit" value="Submit">
 </form>
 </h1>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
