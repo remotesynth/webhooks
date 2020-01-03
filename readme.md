@@ -1,0 +1,1 @@
+This is a simple sample application showing how to use Zapier Webhooks with Netlify Functions in a JAMstack application.
