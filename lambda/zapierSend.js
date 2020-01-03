@@ -6,7 +6,7 @@ exports.handler = async (event, context, callback) => {
     if(!event.body) {
         return { 
             statusCode: 500, 
-            body: 'Name and email code are required.'
+            body: 'Name and email are required.'
         };
     }
 
