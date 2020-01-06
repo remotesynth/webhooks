@@ -4,5 +4,8 @@
   },
   "dependencies": {
     "@octokit/rest": "^16.36.0"
+  },
+  "scripts": {
+    "prebuild" : "npm i"
   }
 }
