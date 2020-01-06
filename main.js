@@ -19,3 +19,29 @@ function sendWebhook(form) {
 
     return false;
 }
+
+function loadLinks() {
+    let request = new XMLHttpRequest();
+    request.open('GET', 'links.json', true);
+
+    request.onload = function() {
+        if (this.status >= 200 && this.status < 400) {
+            let links = JSON.parse(this.response);
+            let linksList = document.getElementById('linksList');
+            let lis = '';
+            links.links.forEach(element=>{
+                lis = lis + '<li><a href="' + element.link + '">' + element.title + '</a></li>';
+            });
+            linksList.innerHTML = lis;
+        } else {
+            console.log('Something went wrong');
+        }
+    };
+    request.onerror = function() {
+        console.log('Something went wrong');
+    };
+      
+    request.send();
+}
+
+loadLinks();
