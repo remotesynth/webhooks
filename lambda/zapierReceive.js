@@ -1,5 +1,4 @@
-const fs = require('fs'),
-      Octokit = require("@octokit/rest"),
+const Octokit = require("@octokit/rest"),
       owner = 'remotesynth',
       repo = 'webhooks';
 
